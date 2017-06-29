@@ -1,5 +1,5 @@
 
-import urllib.request
+#import urllib.request
 import os
 
 import time     
@@ -9,7 +9,7 @@ import urllib2
 os.makedirs('foodimages')
 os.chdir('foodimages')
 wiki="https://en.wikipedia.org/wiki/List_of_Indian_dishes"
-page=urllib.request.urlopen(wiki)
+page=urllib2.urlopen(wiki)
 from bs4 import BeautifulSoup
 soup=BeautifulSoup(page)
 all_tables=soup.find_all('table')
