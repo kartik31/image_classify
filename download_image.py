@@ -6,6 +6,8 @@ import time
 import sys    
 
 import urllib2
+os.makedirs('foodimages')
+os.chdir('foodimages')
 wiki="https://en.wikipedia.org/wiki/List_of_Indian_dishes"
 page=urllib.request.urlopen(wiki)
 from bs4 import BeautifulSoup
