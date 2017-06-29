@@ -14,11 +14,17 @@ from bs4 import BeautifulSoup
 soup=BeautifulSoup(page)
 all_tables=soup.find_all('table')
 rt=soup.find('table',class_='wikitable sortable north')
-A=[]
+B=[]
 for row in rt.findAll('tr'):
 	cells=row.findAll('td')
 	if len(cells)==4:
-		A.append(cells[0].find(text=True))
+		B.append(cells[0].find(text=True))
+A=['dosa','idli','uttapam','samosa','kachori','cheela','Aloo ki tikki','baati','Bhatura','Butter chicken',
+   'Biryani','Chapati','Chole bhature','Poha','Gajar ka halwa','Imarti','Jalebi','Kheer','Kulfi falooda','Makki di roti',
+   'Pani puri','Paratha','Tandoori Chicken','Vada','Barfi','Dhokla','Gulab jamun','Laddu','Pav Bhaji',
+   'Puri','Momo','Rasgulla','Chow mein','White rice','fried rice','Pasta','Burger','Pizza','hamburger',
+   'bread','pastrie','Potato chips','apple','banana','mango','strawberry','Guava','orange','Blueberry','paneer masala',
+   'Bhelpuri','Chana masala','Khandvi','Pakora','Vegetable sandwich','badam halwa','sooji halwa']
 for i in range(0,len(A)):
 	if not os.path.exists(A[i]):
     		os.makedirs(A[i])
