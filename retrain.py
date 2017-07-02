@@ -994,7 +994,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--output_graph',
       type=str,
-      default='/tmp/output_graph.pb',
+      default='/tmp/output_graph2.pb',
       help='Where to save the trained graph.'
   )
   parser.add_argument(
@@ -1012,13 +1012,13 @@ if __name__ == '__main__':
   parser.add_argument(
       '--output_labels',
       type=str,
-      default='/tmp/output_labels.txt',
+      default='/tmp/output_labels2.txt',
       help='Where to save the trained graph\'s labels.'
   )
   parser.add_argument(
       '--summaries_dir',
       type=str,
-      default='/tmp/retrain_logs',
+      default='/tmp/retrain_logs2',
       help='Where to save summary logs for TensorBoard.'
   )
   parser.add_argument(
